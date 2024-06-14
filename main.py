@@ -20,14 +20,14 @@ BOXES = [
     [1351, 371, 1413, 396],
     [1446, 369, 1510, 396],
     # third player
-    [708, 418, 1002, 442],
+    [708, 418, 1000, 454],
     [1043, 419, 1131, 450],
     [1156, 420, 1214, 448],
     [1255, 424, 1311, 449],
     [1355, 423, 1413, 450],
     [1450, 421, 1510, 450],
     # fourth player
-    [708, 568, 1002, 591],
+    [708, 568, 1002, 604],
     [1043, 580, 1131, 600],
     [1156, 580, 1214, 600],
     [1255, 580, 1311, 600],
@@ -35,11 +35,11 @@ BOXES = [
     [1450, 580, 1510, 600],
     # fifth player
     [708, 625, 1002, 660],
-    [1043, 630, 1131, 660],
-    [1156, 630, 1214, 660],
-    [1255, 630, 1311, 660],
-    [1355, 630, 1413, 660],
-    [1450, 630, 1510, 660],
+    [1043, 630, 1131, 655],
+    [1156, 630, 1214, 655],
+    [1255, 630, 1311, 655],
+    [1355, 630, 1413, 655],
+    [1450, 630, 1510, 655],
     # xixth player
     [708, 678, 1002, 712],
     [1043, 683, 1131, 712],
@@ -61,7 +61,7 @@ def text_from_box(image_path, given_box, myconfig):
 
     # if a name couldn't be found, probably due to tag
     if not text and myconfig == NAME_CONFIG:
-        box = (given_box[0], given_box[1] - 5, given_box[2], given_box[3] - 10)
+        box = (given_box[0], given_box[1] - 5, given_box[2], given_box[3] + 20)
         region = img.crop(box)
         region = preprocess_image(region)
         text = pytesseract.image_to_string(region, config=myconfig)
@@ -106,5 +106,5 @@ cur_config = NUMBER_CONFIG
 for b in BOXES:
     if (b[0] == 708):
         cur_config = NAME_CONFIG
-    print(text_from_box("Images/test.png", b, cur_config))
+    print(text_from_box("Images/test2.png", b, cur_config))
     cur_config = NUMBER_CONFIG
