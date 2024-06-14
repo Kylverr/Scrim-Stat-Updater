@@ -8,7 +8,7 @@ BOXES = [
     # first player
     [708, 314, 1000, 346],
     [1044, 311, 1128, 344],
-    [1158, 314, 1210, 344],
+    [1158, 316, 1205, 342],
     [1255, 314, 1311, 346],
     [1350, 310, 1410, 343],
     [1447, 309, 1511, 340],
@@ -39,11 +39,18 @@ BOXES = [
     [1156, 630, 1214, 660],
     [1255, 630, 1311, 660],
     [1355, 630, 1413, 660],
-    [1450, 630, 1510, 660]
+    [1450, 630, 1510, 660],
+    # xixth player
+    [708, 678, 1002, 712],
+    [1043, 683, 1131, 712],
+    [1156, 683, 1214, 712],
+    [1255, 683, 1311, 712],
+    [1355, 685, 1400, 710],
+    [1450, 683, 1510, 712]
 ]
 
-NAME_CONFIG = r'--psm 3 --oem 3'
-NUMBER_CONFIG = r'--psm 8 -c tessedit_char_whitelist=0123456789'
+NAME_CONFIG = r'--psm 7 --oem 3'
+NUMBER_CONFIG = r'--psm 6 -c tessedit_char_whitelist=0123456789'
 
 def text_from_box(image_path, given_box, myconfig):
     img = Image.open(image_path)
@@ -96,7 +103,6 @@ def preprocess_image(region):
     return img
 
 cur_config = NUMBER_CONFIG
-print(text_from_box("Images/test.png", BOXES[2], cur_config))
 for b in BOXES:
     if (b[0] == 708):
         cur_config = NAME_CONFIG
