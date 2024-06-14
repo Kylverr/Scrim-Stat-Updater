@@ -6,7 +6,7 @@ import numpy as np
 
 BOXES = [
     # first player
-    [708, 314, 1000, 346],
+    [708, 310, 1000, 346],
     [1044, 311, 1128, 344],
     [1158, 316, 1205, 342],
     [1255, 314, 1311, 346],
@@ -106,5 +106,5 @@ cur_config = NUMBER_CONFIG
 for b in BOXES:
     if (b[0] == 708):
         cur_config = NAME_CONFIG
-    print(text_from_box("Images/test2.png", b, cur_config))
+    print(text_from_box("Images/test3.png", b, cur_config))
     cur_config = NUMBER_CONFIG
