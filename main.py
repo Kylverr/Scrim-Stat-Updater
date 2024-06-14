@@ -8,7 +8,7 @@ BOXES = [
     # first player
     [708, 314, 1000, 346],
     [1044, 311, 1128, 344],
-    [1155, 310, 1214, 345],
+    [1158, 314, 1210, 344],
     [1255, 314, 1311, 346],
     [1350, 310, 1410, 343],
     [1447, 309, 1511, 340],
@@ -34,16 +34,16 @@ BOXES = [
     [1355, 580, 1413, 600],
     [1450, 580, 1510, 600],
     # fifth player
-    [708, 625, 1002, 655],
-    [1043, 635, 1131, 660],
-    [1156, 635, 1214, 660],
-    [1255, 635, 1311, 660],
-    [1355, 635, 1413, 660],
-    [1450, 635, 1510, 660],
+    [708, 625, 1002, 660],
+    [1043, 630, 1131, 660],
+    [1156, 630, 1214, 660],
+    [1255, 630, 1311, 660],
+    [1355, 630, 1413, 660],
+    [1450, 630, 1510, 660]
 ]
 
-NAME_CONFIG = r"--psm 3 --oem 3"
-NUMBER_CONFIG = "--psm 6 -c tessedit_char_whitelist=0123456789"
+NAME_CONFIG = r'--psm 3 --oem 3'
+NUMBER_CONFIG = r'--psm 8 -c tessedit_char_whitelist=0123456789'
 
 def text_from_box(image_path, given_box, myconfig):
     img = Image.open(image_path)
@@ -76,7 +76,7 @@ def preprocess_image(region):
     img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     
     # Resize the image to improve OCR accuracy
-    # img = cv2.resize(img, None, fx=3, fy=3, interpolation=cv2.INTER_CUBIC)
+    img = cv2.resize(img, None, fx=3, fy=3, interpolation=cv2.INTER_CUBIC)
     
     # Apply binary thresholding
     _, img = cv2.threshold(img, 150, 255, cv2.THRESH_BINARY)
@@ -95,10 +95,10 @@ def preprocess_image(region):
     
     return img
 
-cur_config = ""
+cur_config = NUMBER_CONFIG
+print(text_from_box("Images/test.png", BOXES[2], cur_config))
 for b in BOXES:
     if (b[0] == 708):
         cur_config = NAME_CONFIG
     print(text_from_box("Images/test.png", b, cur_config))
     cur_config = NUMBER_CONFIG
-print(text_from_box("Images/test.png", BOXES[24], cur_config))
