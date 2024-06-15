@@ -3,6 +3,7 @@ from PIL import Image, ImageEnhance
 import openpyxl
 import cv2
 import numpy as np
+import re
 
 BOXES = [
     # first player
@@ -73,7 +74,8 @@ def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
     # return 0 if image_to_string returned nothing
     if not text:
         return "0"
-    cleaned_text = text.rstrip('\n')
+    removed_brackets_text = re.sub(r"\[.*?\]", "", text)
+    cleaned_text = removed_brackets_text.rstrip('\n')
     return cleaned_text
 
 def preprocess_image(region):

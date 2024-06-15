@@ -67,5 +67,23 @@ class TestMain(unittest.TestCase):
     def test_text_from_box_g1_p1_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[5]), "7")
 
+    # TESTS FOR test1.png 2nd PLAYER
+    def test_text_from_box_g1_p1_name(self):
+        self.assertEqual(text_from_box("Images/test1.png", BOXES[6]), "Im Shrodinger")
+    
+    # def test_text_from_box_g1_p1_score(self):
+    #     self.assertEqual(text_from_box("Images/test1.png", BOXES[1]), "955")
+
+    # def test_text_from_box_g1_p1_goals(self):
+    #     self.assertEqual(text_from_box("Images/test1.png", BOXES[2]), "5")
+        
+    # def test_text_from_box_g1_p1_assists(self):
+    #     self.assertEqual(text_from_box("Images/test1.png", BOXES[3]), "0")
+
+    # def test_text_from_box_g1_p1_saves(self):
+    #     self.assertEqual(text_from_box("Images/test1.png", BOXES[4]), "2")
+
+    # def test_text_from_box_g1_p1_shots(self):
+    #     self.assertEqual(text_from_box("Images/test1.png", BOXES[5]), "7")
 if __name__ == '__main__':
     unittest.main()
