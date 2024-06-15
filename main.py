@@ -52,7 +52,11 @@ BOXES = [
 NAME_CONFIG = r'--psm 7 --oem 3'
 NUMBER_CONFIG = r'--psm 6 -c tessedit_char_whitelist=0123456789'
 
-def text_from_box(image_path, given_box, myconfig):
+def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
+    # set correct config
+    if (given_box[0] == 708):
+        myconfig = NAME_CONFIG
+
     img = Image.open(image_path)
     box = (given_box[0], given_box[1], given_box[2], given_box[3])
     region = img.crop(box)
@@ -69,7 +73,8 @@ def text_from_box(image_path, given_box, myconfig):
     # return 0 if image_to_string returned nothing
     if not text:
         return "0"
-    return text
+    cleaned_text = text.rstrip('\n')
+    return cleaned_text
 
 def preprocess_image(region):
     # Enhance the image contrast
@@ -101,11 +106,3 @@ def preprocess_image(region):
     img.save('preprocessed_image.png')
     
     return img
-
-cur_config = NUMBER_CONFIG
-for b in BOXES:
-    if (b[0] == 708):
-        cur_config = NAME_CONFIG
-    print(text_from_box("Images/test5.png", b, cur_config))
-    cur_config = NUMBER_CONFIG
-print(text_from_box("Images/test5.png", BOXES[1], NUMBER_CONFIG))
