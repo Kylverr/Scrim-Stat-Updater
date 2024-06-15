@@ -108,3 +108,9 @@ def preprocess_image(region):
     img.save('preprocessed_image.png')
     
     return img
+
+def extract_game_info(filepath):
+    game_info = []
+
+    for b in BOXES:
+        game_info.append(text_from_box(filepath, b))
