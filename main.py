@@ -42,7 +42,7 @@ BOXES = [
     [1355, 630, 1413, 655],
     [1450, 630, 1505, 655],
     # sixth player
-    [708, 678, 1002, 712],
+    [708, 678, 1002, 716],
     [1043, 683, 1131, 712],
     [1156, 683, 1214, 712],
     [1255, 683, 1311, 712],
@@ -50,7 +50,7 @@ BOXES = [
     [1450, 683, 1510, 712]
 ]
 
-NAME_CONFIG = r'--psm 7 --oem 3'
+NAME_CONFIG = r'--psm 7 --oem 3 -l eng'
 NUMBER_CONFIG = r'--psm 6 -c tessedit_char_whitelist=0123456789'
 
 def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
@@ -75,7 +75,7 @@ def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
     if not text:
         return "0"
     removed_brackets_text = re.sub(r"\[.*?\]", "", text)
-    cleaned_text = removed_brackets_text.rstrip('\n')
+    cleaned_text = removed_brackets_text.strip()
     return cleaned_text
 
 def preprocess_image(region):
