@@ -114,3 +114,5 @@ def extract_game_info(filepath):
 
     for b in BOXES:
         game_info.append(text_from_box(filepath, b))
+    
+    return game_info
