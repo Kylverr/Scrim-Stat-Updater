@@ -4,9 +4,33 @@ import sys
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
+"""
+update_spreadsheet.py
+
+This script takes a filepath of a Rocket League match scoreboard (full screenshot 
+with no cropping) and updates a spreadsheet of the scoreboard values. The spreadsheet 
+is saved.
+
+Author: Kyle Stewart
+Date: 2024-06-16
+
+Usage:
+    python update_spreadsheet.py <image_path>
+"""
+
+SPREADSHEET_PATH = "C:/Users/kylve/OneDrive/Documents/RL_Scrims_Summer_2024.xlsx"
+
 def update_spreadsheet(filepath):
+    """
+    Updates the Excel spreadsheet by inserting a row of data read from the provided 
+    image.
+
+    Args:
+        filepath (str): The path to the image.
+    """
+
     # load workbook
-    workbook = openpyxl.load_workbook("C:/Users/kylve/OneDrive/Documents/RL_Scrims_Summer_2024.xlsx")
+    workbook = openpyxl.load_workbook(SPREADSHEET_PATH)
 
     # select Games worksheet
     sheet = workbook["Games"]

@@ -1,6 +1,16 @@
 import unittest
 from main import text_from_box
 
+"""
+Testing file for main.py.
+
+Author: Kyle Stewart
+Date: 2024-06-16
+
+Usage:
+    python -m unittest tests.test_main
+"""
+
 BOXES = [
     # first player
     [708, 310, 1000, 346],

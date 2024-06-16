@@ -4,6 +4,19 @@ import openpyxl
 import cv2
 import numpy as np
 import re
+import sys
+
+"""
+This script reads an image of a Rocket League end-game scoreboard (uncropped) and 
+extracts data containing the name, score, number of goals, number of assists, number 
+of saves, and number of shots of each player.
+
+Author: Kyle Stewart
+Date: 2024-06-16
+
+Usage:
+    python main.py <image_path>
+"""
 
 BOXES = [
     # first player
@@ -54,6 +67,17 @@ NAME_CONFIG = r'--psm 7 --oem 3 -l eng'
 NUMBER_CONFIG = r'--psm 6 -c tessedit_char_whitelist=0123456789'
 
 def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
+    """
+    Extracts text within the specific pixel box from the image with the 
+    specified path.
+
+    Args:
+        image_path (str): path to the image file from which data will be extracted 
+        from
+        given_box (array): [left, upper, right, lower] pixel array to search within
+        myconfig: pytesseract config to help read data
+    """
+
     # set correct config
     if (given_box[0] == 708):
         myconfig = NAME_CONFIG
@@ -79,6 +103,13 @@ def text_from_box(image_path, given_box, myconfig=NUMBER_CONFIG):
     return cleaned_text
 
 def preprocess_image(region):
+    """
+    Helper function that takes a region of an image and enhances it for 
+    better reading/extraction.
+
+    Args:
+        region (array): region of image to enhance
+    """
     # Enhance the image contrast
     enhancer = ImageEnhance.Contrast(region)
     region = enhancer.enhance(2)
@@ -110,9 +141,22 @@ def preprocess_image(region):
     return img
 
 def extract_game_info(filepath):
+    """
+        Extracts game info from the image with the specified path. Data is returned 
+        in an array.
+
+        Args:
+            filepath (str): file path to image
+    """
     game_info = []
 
     for b in BOXES:
         game_info.append(text_from_box(filepath, b))
     
     return game_info
+
+if len(sys.argv) < 1:
+    print("Invalid number of args given. Make sure you are only providing the path to the image you want scanned.")
+    sys.exit(1)
+
+extract_game_info(sys.argv[1])
