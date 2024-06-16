@@ -79,138 +79,138 @@ class TestMain(unittest.TestCase):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[5]), "7")
 
     # TESTS FOR test1.png 2nd PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g1_p2_name(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[6]), "Im Schrédinger")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g1_p2_score(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[7]), "385")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g1_p2_goals(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[8]), "0")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g1_p2_assists(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[9]), "1")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g1_p2_saves(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[10]), "4")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g1_p2_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[11]), "1")  
 
     # TESTS FOR test1.png 3rd PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g1_p3_name(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[12]), "vek.")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g1_p3_score(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[13]), "321")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g1_p3_goals(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[14]), "0")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g1_p3_assists(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[15]), "3")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g1_p3_saves(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[16]), "0")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g1_p3_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[17]), "0")
 
     # TESTS FOR test1.png 4th PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g1_p4_name(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[18]), "LEGEND? YT")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g1_p4_score(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[19]), "292")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g1_p4_goals(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[20]), "2")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g1_p4_assists(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[21]), "0")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g1_p4_saves(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[22]), "0")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g1_p4_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[23]), "3")
 
     # TESTS FOR test1.png 5th PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g1_p5_name(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[24]), "TT7")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g1_p5_score(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[25]), "290")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g1_p5_goals(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[26]), "0")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g1_p5_assists(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[27]), "0")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g1_p5_saves(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[28]), "2")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g1_p5_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[29]), "3")
 
     # TESTS FOR test1.png 6th PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g1_p6_name(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[30]), "RICO")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g1_p6_score(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[31]), "194")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g1_p6_goals(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[32]), "0")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g1_p6_assists(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[33]), "1")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g1_p6_saves(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[34]), "0")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g1_p6_shots(self):
         self.assertEqual(text_from_box("Images/test1.png", BOXES[35]), "3")
 
 
 ##########################################################################################################################################
     # TESTS FOR test2.png 1st PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g2_p1_name(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[0]), "twitch.tv/kylverr")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g2_p1_score(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[1]), "488")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g2_p1_goals(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[2]), "2")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g2_p1_assists(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[3]), "1")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g2_p1_saves(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[4]), "1")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g2_p1_shots(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[5]), "5")
 
     # TESTS FOR test2.png 2nd PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g2_p2_name(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[6]), "Im Schrédinger")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g2_p2_score(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[7]), "486")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g2_p2_goals(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[8]), "2")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g2_p2_assists(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[9]), "1")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g2_p2_saves(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[10]), "1")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g2_p2_shots(self):
         self.assertEqual(text_from_box("Images/test2.png", BOXES[11]), "5")  
 
     # TESTS FOR test2.png 3rd PLAYER
@@ -616,22 +616,22 @@ class TestMain(unittest.TestCase):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[29]), "0")
 
     # TESTS FOR test5.png 6th PLAYER
-    def test_text_from_box_g1_p1_name(self):
+    def test_text_from_box_g5_p6_name(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[30]), "RICO")
     
-    def test_text_from_box_g1_p1_score(self):
+    def test_text_from_box_g5_p6_score(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[31]), "162")
 
-    def test_text_from_box_g1_p1_goals(self):
+    def test_text_from_box_g5_p6_goals(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[32]), "0")
         
-    def test_text_from_box_g1_p1_assists(self):
+    def test_text_from_box_g5_p6_assists(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[33]), "1")
 
-    def test_text_from_box_g1_p1_saves(self):
+    def test_text_from_box_g5_p6_saves(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[34]), "0")
 
-    def test_text_from_box_g1_p1_shots(self):
+    def test_text_from_box_g5_p6_shots(self):
         self.assertEqual(text_from_box("Images/test5.png", BOXES[35]), "3")
     
 if __name__ == '__main__':

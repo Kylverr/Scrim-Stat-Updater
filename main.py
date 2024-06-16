@@ -155,8 +155,10 @@ def extract_game_info(filepath):
     
     return game_info
 
-if len(sys.argv) < 1:
-    print("Invalid number of args given. Make sure you are only providing the path to the image you want scanned.")
-    sys.exit(1)
+if __name__ == "__main__":
 
-extract_game_info(sys.argv[1])
+    if len(sys.argv) < 1:
+        print("Invalid number of args given. Make sure you are only providing the path to the image you want scanned.")
+        sys.exit(1)
+
+    extract_game_info(sys.argv[1])
