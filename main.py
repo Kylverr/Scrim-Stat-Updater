@@ -41,7 +41,7 @@ BOXES = [
     [1355, 423, 1413, 450],
     [1450, 421, 1510, 450],
     # fourth player
-    [708, 568, 1002, 604],
+    [708, 570, 1000, 606],
     [1043, 580, 1131, 600],
     [1156, 580, 1214, 600],
     [1255, 580, 1311, 600],
@@ -136,7 +136,7 @@ def preprocess_image(region):
     img = Image.fromarray(img)
 
     # Save the preprocessed image for debugging
-    img.save('preprocessed_image.png')
+    img.save('preprocessed_image1.png')
     
     return img
 
@@ -162,3 +162,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     extract_game_info(sys.argv[1])
+
+    # print(text_from_box(sys.argv[1], BOXES[18]))
+    # print(text_from_box(sys.argv[1], BOXES[0]))
